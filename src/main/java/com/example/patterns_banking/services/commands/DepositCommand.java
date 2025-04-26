@@ -25,7 +25,8 @@ public class DepositCommand implements ICommand<Account> {
     }
 
     Account account = accountOptional.get();
-    Account accountDec = new AccountNotificationDecorator(account);
+    Account accountDec = new AccountNotificationDecorator(account);//lo que estoy guardando es una entidad accountNotificationDecorator
+    //como extendiendo de account puedo considerarlo como un account
     accountDec.deposit(amount);
     return accountRepository.save(accountDec);
   }

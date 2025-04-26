@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class AccountDecorator extends Account {
-  private Account account;
+public abstract class AccountDecorator extends Account {//clase decoradora base
+    private Account account;
 
 //  Crear un nuevo decorador para controlar qué tanto dinero se le puede prestar a una persona en un retiro
 //  LIMITE sobre retiros: 20.000
@@ -23,63 +23,63 @@ public abstract class AccountDecorator extends Account {
 //  Se hizo el retiro y el excedente fue de 10k
 //  La cuenta me queda vacíá
 
-  @Override
-  public Long getId() {
-    return account.getId();
-  }
+    @Override
+    public Long getId() {
+        return account.getId();
+    }
 
-  @Override
-  public String getAccountNumber() {
-    return account.getAccountNumber();
-  }
+    @Override
+    public String getAccountNumber() {
+        return account.getAccountNumber();
+    }
 
-  @Override
-  public Double getBalance() {
-    return account.getBalance();
-  }
+    @Override
+    public Double getBalance() {
+        return account.getBalance();
+    }
 
-  @Override
-  public Customer getCustomer() {
-    return account.getCustomer();
-  }
+    @Override
+    public Customer getCustomer() {
+        return account.getCustomer();
+    }
 
-  @Override
-  public void setId(Long id) {
-    account.setId(id);
-  }
+    @Override
+    public void setId(Long id) {
+        account.setId(id);
+    }
 
-  @Override
-  public void setAccountNumber(String accountNumber) {
-    account.setAccountNumber(accountNumber);
-  }
+    @Override
+    public void setAccountNumber(String accountNumber) {
+        account.setAccountNumber(accountNumber);
+    }
 
-  @Override
-  public void setBalance(Double balance) {
-    account.setBalance(balance);
-  }
+    @Override
+    public void setBalance(Double balance) {
+        account.setBalance(balance);
+    }
 
-  @Override
-  public void setCustomer(Customer customer) {
-    account.setCustomer(customer);
-  }
+    @Override
+    public void setCustomer(Customer customer) {
+        account.setCustomer(customer);
+    }
 
-  @Override
-  public Double calculateDepositFee(Double amount) {
-    return account.calculateDepositFee(amount);
-  }
+    @Override
+    public Double calculateDepositFee(Double amount) {
+        return account.calculateDepositFee(amount);
+    }
 
-  @Override
-  public double calculateWithdrawalFee(double amount) {
-    return account.calculateWithdrawalFee(amount);
-  }
+    @Override
+    public double calculateWithdrawalFee(double amount) {
+        return account.calculateWithdrawalFee(amount);
+    }
 
-  @Override
-  public void withdraw(double amount) {
-    account.withdraw(amount);
-  }
+    @Override
+    public void withdraw(double amount) {
+        account.withdraw(amount);
+    }
 
-  @Override
-  public void deposit(Double amount) {
-    account.deposit(amount);
-  }
+    @Override
+    public void deposit(Double amount) {
+        account.deposit(amount);
+    }
 }

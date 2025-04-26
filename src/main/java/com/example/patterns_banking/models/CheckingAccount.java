@@ -24,4 +24,5 @@ public class CheckingAccount extends Account{
   public double calculateWithdrawalFee(double amount) {
     return amount * WITHDRAWAL_FEE_RATE;
   }
+
 }

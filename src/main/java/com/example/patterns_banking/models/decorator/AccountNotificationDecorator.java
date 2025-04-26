@@ -13,8 +13,9 @@ public class AccountNotificationDecorator extends AccountDecorator {
   }
 
   @Override
-  public void deposit(Double amount) {
+  public void deposit(Double amount) {//funcionalidad que extendimos desde account (patron decorator)
     super.deposit(amount);
+
     System.out.println("Se ha realizado un deposito de: " + amount + " en la cuenta de: " + getAccountNumber());
   }
 }
